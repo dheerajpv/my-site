@@ -1,0 +1,117 @@
+.article {
+    --center-padding-amount: 12.5vw;
+    padding-left: var(--center-padding-amount);
+    padding-right: var(--center-padding-amount);
+}
+
+.article-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: Montserrat;
+}
+
+.article-title {
+    font-size: 3rem;
+}
+
+.article-data img {
+    @apply m-2;
+    object-fit: cover;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+}
+
+.article-main {
+    font-size: 1.125rem;
+}
+
+.article-main code {
+    font-family: Consolas, monospace;
+}
+
+.article-main pre {
+    margin: 1rem;
+    font-size: 1rem;
+    font-family: "JetBrains Mono", serif, "Consolas", monospace;
+}
+
+.article-main pre code {
+    border-radius: 5px;
+}
+
+.article-main p {
+    padding-bottom: 0.5rem;
+    font-family: "Open Sans";
+}
+
+.article-main h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.article-main h2 {
+    font-size: 2rem;
+}
+
+.article-main h3 {
+    font-size: 1.5rem;
+}
+
+.article-main h4 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.article-main h5 {
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.article-main h6 {
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.article-main ol {
+    list-style: decimal inside;
+    padding-bottom: 0.5rem;
+}
+
+.article-main ul {
+    list-style: disc inside;
+    padding-bottom: 0.5rem;
+}
+
+.article-main blockquote {
+    background-color: #444;
+    border-inline-start: 5px solid #888;
+    border-radius: 5px;
+    padding-inline-start: 0.5rem;
+    padding-block-start: 0.25rem;
+    margin-block-end: 0.5rem;
+}
+
+.article-main a {
+    @apply text-blue-500;
+    transition: 250ms;
+}
+
+.article-main a:visited {
+    text-decoration: none;
+}
+
+.article-main a:hover {
+    text-decoration: underline;
+}
+
+.article-main a:focus {
+    @apply text-blue-600;
+}
+
+@media (prefers-color-scheme: dark) {
+    .article {
+        color: white;
+    }
+}

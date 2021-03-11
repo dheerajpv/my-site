@@ -1,0 +1,39 @@
+.home {
+    color: black;
+}
+
+.full-screen {
+    height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/img/main-bg-transperent.jpg);
+    background-color: #000;
+    background-size: cover;
+}
+
+.lg-name {
+    @apply text-6xl;
+    font-family: Montserrat;
+    margin-bottom: 0.75rem;
+    color: #272727;
+    font-weight: 700;
+}
+
+.typewriter-container {
+    @apply text-blue-600;
+    font-size: 2rem;
+}
+
+.intro {
+    padding-top: 3rem;
+    padding-left: 5rem;
+    padding-bottom: 5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    .home {
+        color: white;
+    }
+}
