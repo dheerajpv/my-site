@@ -15,10 +15,10 @@
 
 .lg-name {
     @apply text-6xl;
-    font-family: Montserrat;
+    font-family: Poppins, Montserrat, "Open Sans", sans-serif;
     margin-bottom: 0.75rem;
     color: #272727;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .typewriter-container {

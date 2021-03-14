@@ -16,16 +16,18 @@ export default function Home() {
                     <span className={styles["lg-name"]}>Dheeraj Prakash</span>
                     <div
                         className={`${styles["typewriter-container"]} flex flex-row`}
+                        style={{
+                            fontFamily: "Poppins, Montserrat, sans-serif",
+                        }}
                     >
-                        <span className="text-black mr-1.5">A Person</span>
+                        <span className="text-black mr-1.5">I</span>
                         <TypeWriter
                             onInit={() => {}}
                             options={{
-                                // todo: have good strings
                                 strings: [
-                                    "that is cool",
-                                    "who is smart",
-                                    "that likes CS",
+                                    "am a programmer",
+                                    "love computer science",
+                                    "love to make things",
                                 ],
                                 autoStart: true,
                                 loop: true,

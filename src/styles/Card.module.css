@@ -147,3 +147,20 @@
     background-clip: text;
     border-color: white;
 }
+
+.card-img img {
+    border-radius: 5px;
+}
+
+.card-title {
+    @apply text-black;
+    @apply dark:text-white;
+    font-family: Montserrat, "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.card-description {
+    @apply text-black;
+    @apply dark:text-white;
+}

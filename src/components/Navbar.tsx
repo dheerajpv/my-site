@@ -10,6 +10,14 @@ const Navbar = () => {
                 Dheeraj Prakash
             </a>
             <a
+                href="/about"
+                className={`${styles["nav-link"]} ${
+                    router.asPath === "/about" ? styles["active"] : ""
+                }`}
+            >
+                About
+            </a>
+            <a
                 href="/portfolio"
                 className={`${styles["nav-link"]} ${
                     router.asPath === "/portfolio" ? styles["active"] : ""
