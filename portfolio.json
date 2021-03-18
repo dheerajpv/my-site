@@ -1,0 +1,31 @@
+{
+    "portfolio": [
+        {
+            "title": "AeroBot",
+            "description": "An open-source, fully featured Discord bot.",
+            "imgSrc": "/img/portfolio/aero-bot/icon.png",
+            "tags": ["discord.js", "ts"],
+            "href": "/aero-bot"
+        },
+        {
+            "title": "AeroClient",
+            "description": "An open-source framework for discord.js",
+            "imgSrc": "https://cdn.discordapp.com/avatars/809548335349497867/fe8ccc9e0055882febdd46d078c458e1.webp?size=512",
+            "tags": ["ts", "discord.js", "library"],
+            "href": "https://aero-ware.github.io/aeroclient"
+        },
+        {
+            "title": "Enigma",
+            "description": "NewtonHACKS 2020 Submission, along with my team",
+            "tags": ["react", "crypto"],
+            "href": "https://github.com/dheerajpv/newtonhacks2020-enigma"
+        },
+        {
+            "title": "Exoplanet Enterprise",
+            "description": "HackMIT Bluleprint 2021 Submission, along with my team",
+            "imgSrc": "https://cdn.discordapp.com/attachments/739879501067976756/813181527180443658/Screen_Shot_2021-02-21_at_5.46.14_PM.png",
+            "tags": ["react", "python", "flask"],
+            "href": "https://github.com/dheerajpv/blueprint-2021"
+        }
+    ]
+}
