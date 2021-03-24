@@ -7,7 +7,7 @@ export default function Home() {
         <div className={styles.home}>
             <Head>
                 <title>
-                    Dheeraj Prakash - A Student and Aspiring Developer
+                    Dheeraj Prakash - A Student and Aspiring Computer Scientist
                 </title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>

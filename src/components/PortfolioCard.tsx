@@ -28,9 +28,9 @@ const PortfolioCard = ({
 
                 <div className={styles["tags"]}>
                     {tags.map((t) => (
-                        <a href="#" key={t}>
+                        <span key={t} style={{ cursor: "pointer" }}>
                             {t}
-                        </a>
+                        </span>
                     ))}
                 </div>
             </div>

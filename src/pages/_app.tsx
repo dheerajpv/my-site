@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <meta
                     key="og:description"
                     name="og:description"
-                    content="The Wepbage of a student and aspiring developer - Dheeraj Prakash"
+                    content="The Wepbage of a student and aspiring Computer Scientist - Dheeraj Prakash"
                 />
                 <script
                     key="font-awesome"

@@ -124,7 +124,7 @@
     margin-bottom: 0;
 }
 
-.tags a {
+.tags * {
     font-style: normal;
     font-weight: 700;
     font-size: 0.5rem;
@@ -137,7 +137,7 @@
     position: relative;
 }
 
-.tags a:hover {
+.tags *:hover {
     background: linear-gradient(90deg, #ff8a00, #e52e71);
     text-shadow: none;
     -webkit-text-fill-color: transparent;

@@ -33,9 +33,9 @@ const BlogArticleCard = ({ data, content }: PropTypes) => {
             <div className={styles["tags"]}>
                 {data.tags.split(",").map((t) => {
                     return (
-                        <a href="#" key={t}>
+                        <span style={{ cursor: "pointer" }} key={t}>
                             {t}
-                        </a>
+                        </span>
                     );
                 })}
             </div>

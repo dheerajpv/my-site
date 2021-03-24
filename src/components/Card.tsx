@@ -35,9 +35,9 @@ const Card = ({ title, desc, author, date, tags, imgSrc }: PropTypes) => {
 
             <div className={styles["tags"]}>
                 {tags.map((t) => (
-                    <a href="#" key={t}>
+                    <span style={{ cursor: "pointer" }} key={t}>
                         {t}
-                    </a>
+                    </span>
                 ))}
             </div>
         </article>

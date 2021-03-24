@@ -1,0 +1,25 @@
+.about {
+    font-family: "Open Sans", sans-serif;
+}
+
+.title {
+    @apply mt-2;
+    font-family: Poppins, sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.about-list {
+    list-style: none;
+}
+
+.about h2 {
+    font-family: Poppins, Montserrat, "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.about a {
+    @apply text-blue-500;
+    @apply hover:underline;
+}

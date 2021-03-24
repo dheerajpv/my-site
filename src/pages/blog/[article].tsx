@@ -20,7 +20,7 @@ const Article = ({ data, content }: PropTypes) => {
     return (
         <>
             <Head>
-                <title>
+                <title key="title">
                     {data.title} - {data.author}
                 </title>
                 <meta key="og:title" name="og:title" content={data.title} />

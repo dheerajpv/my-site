@@ -52,7 +52,7 @@ const Blog = ({ articles }: PropTypes) => {
                 <meta
                     key="og:description"
                     name="og:description"
-                    content="Dheeraj Prakash's blog - A student and aspiring developer"
+                    content="Dheeraj Prakash's blog - A student and aspiring Computer Scientist"
                 />
             </Head>
             <div className={styles["blog"]}>

@@ -1,0 +1,33 @@
+@keyframes sweep {
+    from {
+        opacity: 0;
+        margin-left: -10px;
+    }
+    to {
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+
+details.lang-info[open] summary ~ * {
+    animation: sweep 0.5s ease-in-out;
+}
+
+details.lang-info {
+    padding: 0.5rem 1rem;
+    height: min-content;
+}
+
+.lang-info summary {
+    cursor: pointer;
+}
+
+.lang-info summary > * {
+    display: inline;
+}
+
+.lang-name {
+    font-family: Poppins, Montserrat, "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
