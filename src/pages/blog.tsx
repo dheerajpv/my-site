@@ -39,7 +39,7 @@ const Blog = ({ articles }: PropTypes) => {
             a.data.tags.toLowerCase().includes(searchValue) ||
             strippedContent.toLowerCase().includes(searchValue)
         )
-            return <BlogArticleCard {...a} />;
+            return <BlogArticleCard {...a} key={a.data.title + a.data.date} />;
         else return null;
     });
 
@@ -60,6 +60,7 @@ const Blog = ({ articles }: PropTypes) => {
                 <CardList>
                     {articles.slice(0, 5).map((a) => (
                         <Card
+                            key={a.data.title + a.data.date}
                             author={a.data.author}
                             imgSrc={a.data.imgSrc}
                             desc={a.data.desc}

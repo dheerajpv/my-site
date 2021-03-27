@@ -4,10 +4,13 @@ import { join } from "path";
 import matter from "gray-matter";
 import remark from "remark";
 import html from "remark-html";
+import hljs from "highlight.js";
+import "highlight.js/styles/atom-one-dark.css";
 import { IBlogArticleData } from "../../types";
 import styles from "../../styles/article.module.css";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 type PropTypes = {
     data: IBlogArticleData;
@@ -16,6 +19,8 @@ type PropTypes = {
 
 const Article = ({ data, content }: PropTypes) => {
     const router = useRouter();
+
+    useEffect(hljs.highlightAll, []);
 
     return (
         <>

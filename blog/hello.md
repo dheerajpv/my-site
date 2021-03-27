@@ -7,12 +7,12 @@ date: 3/10/21
 tags: test,js,tsx
 ---
 
-<link
+<!-- <link
     rel="stylesheet"
     href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/atom-one-dark.min.css"
 />
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
+<script>hljs.highlightAll();</script> -->
 
 **This** _is_ a `test`.
 
