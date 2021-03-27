@@ -35,20 +35,34 @@ const Article = ({ data, content }: PropTypes) => {
                     content={`https://dheerajpv.vercel.app/${router.asPath}`}
                 />
             </Head>
-            <article className={styles["article"]}>
-                <h1 className={styles["article-title"]}>{data.title}</h1>
-                <h3>{data.desc}</h3>
-                <div className={styles["article-data"]}>
-                    <img src={data.imgSrc} />
-                    {data.date} by {data.author}
+            <article className={`${styles["article"]} dark:text-white pt-3`}>
+                <div
+                    className={`${styles["article-width"]} mb-3 dark:text-gray-300`}
+                >
+                    <h1
+                        className={`${styles["article-title"]} dark:text-white`}
+                    >
+                        {data.title}
+                    </h1>
+                    <p className="text-xl" style={{ fontFamily: "Open Sans" }}>
+                        {data.desc}
+                    </p>
+                    <div className={`${styles["article-data"]}`}>
+                        <img src={data.imgSrc} />
+                        {data.date} by {data.author}
+                    </div>
                 </div>
-                <main className={styles["article-main"]}>
-                    <div
-                        dangerouslySetInnerHTML={{
-                            __html: content,
-                        }}
-                    ></div>
-                </main>
+
+                <hr
+                    className={`${styles["article-width"]} dark:border-gray-400 border-gray-900`}
+                />
+
+                <main
+                    className={`${styles["article-main"]} ${styles["article-width"]} prose dark:prose-light mb-5`}
+                    dangerouslySetInnerHTML={{
+                        __html: content,
+                    }}
+                />
             </article>
         </>
     );
