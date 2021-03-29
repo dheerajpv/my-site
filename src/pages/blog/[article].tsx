@@ -2,15 +2,23 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import fs from "fs/promises";
 import { join } from "path";
 import matter from "gray-matter";
+import Markdown from "react-markdown";
 import remark from "remark";
 import html from "remark-html";
-import hljs from "highlight.js";
-import "highlight.js/styles/atom-one-dark.css";
+import { PrismAsync as Highlight } from "react-syntax-highlighter";
+import codeStyle from "../../../syntax-theme";
 import { IBlogArticleData } from "../../types";
 import styles from "../../styles/article.module.css";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+
+const CodeBlock = ({ language, value }) => {
+    return (
+        <Highlight language={language} style={codeStyle}>
+            {value}
+        </Highlight>
+    );
+};
 
 type PropTypes = {
     data: IBlogArticleData;
@@ -19,8 +27,6 @@ type PropTypes = {
 
 const Article = ({ data, content }: PropTypes) => {
     const router = useRouter();
-
-    useEffect(hljs.highlightAll, []);
 
     return (
         <>
@@ -63,11 +69,15 @@ const Article = ({ data, content }: PropTypes) => {
                 />
 
                 <main
-                    className={`${styles["article-main"]} ${styles["article-width"]} prose dark:prose-light mb-5`}
-                    dangerouslySetInnerHTML={{
-                        __html: content,
-                    }}
-                />
+                    className={`${styles["article-main"]} ${styles["article-width"]} prose dark:prose-light mb-5 md:prose-lg lg:prose-xl`}
+                >
+                    <Markdown
+                        renderers={{ code: CodeBlock }}
+                        allowDangerousHtml
+                    >
+                        {content}
+                    </Markdown>
+                </main>
             </article>
         </>
     );
@@ -97,7 +107,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         return {
             props: {
                 data: md.data,
-                content: content,
+                content: md.content,
             },
         };
     } catch (e) {
