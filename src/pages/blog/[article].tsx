@@ -3,8 +3,6 @@ import fs from "fs/promises";
 import { join } from "path";
 import matter from "gray-matter";
 import Markdown from "react-markdown";
-import remark from "remark";
-import html from "remark-html";
 import { PrismAsync as Highlight } from "react-syntax-highlighter";
 import codeStyle from "../../../syntax-theme";
 import { IBlogArticleData } from "../../types";
@@ -94,15 +92,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         );
 
         const md = matter(file.toString());
-
-        let content: string;
-
-        remark()
-            .use(html)
-            .process(md.content, (err, file) => {
-                if (err) console.error(err);
-                content = String(file);
-            });
 
         return {
             props: {
