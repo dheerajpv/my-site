@@ -41,6 +41,14 @@
     cursor: pointer;
 }
 
+.card-header h2:hover {
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
 .card-description {
     font-family: "Open Sans", sans-serif;
 }
@@ -107,7 +115,7 @@
     margin-bottom: 0;
 }
 
-.tags a {
+.tags span {
     font-style: normal;
     font-weight: 700;
     font-size: 0.5rem;
@@ -120,7 +128,7 @@
     position: relative;
 }
 
-.tags a:hover {
+.tags span:hover {
     background: linear-gradient(90deg, #ff8a00, #e52e71);
     text-shadow: none;
     -webkit-text-fill-color: transparent;
